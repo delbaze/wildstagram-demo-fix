@@ -12,6 +12,7 @@ services:
     volumes:
       - ./react_native_app/package.json:/react_native_app/package.json
       - ./react_native_app/package-lock.json:/react_native_app/package-lock.json
+      - ./react_native_app:/react_native_app/
     healthcheck:
       disable: true
 
