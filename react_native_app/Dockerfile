@@ -7,7 +7,7 @@ WORKDIR /react_native_app
 
 COPY ./package.json ./package-lock.json ./
 RUN npm install
-COPY ./react_native_app .
+COPY . .
 
 ENTRYPOINT ["npm", "run"]
 CMD ["start"]
