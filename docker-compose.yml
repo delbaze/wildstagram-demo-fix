@@ -1,0 +1,17 @@
+services:
+  react_native_app:
+    build:
+      context: .
+      args:
+        - NODE_ENV=development
+    environment:
+      - NODE_ENV=development
+    tty: true
+    ports:
+      - '19000:19000'
+    volumes:
+      - ./react_native_app/package.json:/react_native_app/package.json
+      - ./react_native_app/package-lock.json:/react_native_app/package-lock.json
+    healthcheck:
+      disable: true
+
